@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Building Animation */
+.building-animation {
+  animation: buildingPop 3s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  transform: translateY(100%);
+}
+
+@keyframes buildingPop {
+  0% {
+    transform: translateY(100%) scale(0.8);
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(60%) scale(1.2);
+    opacity: 0.6;
+  }
+  70% {
+    transform: translateY(20%) scale(0.95);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
+}
